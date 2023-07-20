@@ -17,7 +17,12 @@ function clearResult(){
     inputEl.value = "";
 }
 function calculateResult(){
-    inputEl.value = eval(inputEl.value)
+    if(inputEl.value === ''){
+        inputEl.value = "";
+    }else{
+        inputEl.value = eval(inputEl.value)
+    }
+    
 }
 function appendVal(buttonVal){
     inputEl.value += buttonVal;
